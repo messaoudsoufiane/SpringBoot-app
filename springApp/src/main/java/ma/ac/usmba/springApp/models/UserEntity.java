@@ -29,6 +29,6 @@ public class UserEntity implements Serializable {
     , inverseJoinColumns =@JoinColumn(name = "roleId") )
     private List<RoleEntity> roles;
 
-    @OneToOne(mappedBy = "user_id",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "user",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private UserProfile profile;
 }
